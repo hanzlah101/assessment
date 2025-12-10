@@ -1,65 +1,63 @@
-import Image from "next/image";
+import Image from "next/image"
+import circleGif from "@/public/images/rotating-circle.gif"
+import { GradientBG } from "@/components/gradient-bg"
+import { Polygon } from "@/components/polygon"
+import { AIIcon } from "@/components/icons/ai"
+import { InboxIcon } from "@/components/icons/inbox"
+import { UserIcon } from "@/components/icons/user"
+import { WorkflowIcon } from "@/components/icons/workflow"
+import { CampaignIcon } from "@/components/icons/campaign"
+import { Dashboard } from "@/components/dashboard"
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <>
+      <div className="relative flex min-h-svh flex-col bg-[#0C0C0C] px-3 py-3 sm:px-4 sm:py-4 lg:px-6 lg:py-[24.5px]">
+        <GradientBG />
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
           priority
+          unoptimized
+          src={circleGif}
+          alt="Portal"
+          className="pointer-events-none fixed top-20 left-1/2 z-10 size-52 -translate-x-1/2 object-cover mix-blend-screen sm:top-24 sm:size-60 lg:top-[88.5px] lg:size-72"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+
+        <div className="sticky top-18 flex w-full flex-col items-center justify-center gap-3 px-6 pt-6 pb-8 text-white sm:px-10 sm:pb-12 lg:px-20 lg:pb-16">
+          <Polygon className="absolute top-10 left-[20%]">
+            <AIIcon />
+          </Polygon>
+
+          <Polygon className="absolute top-50 left-[8%] size-20">
+            <InboxIcon className="size-6" />
+          </Polygon>
+
+          <Polygon className="absolute top-68 left-[25%] size-20">
+            <UserIcon className="size-6" />
+          </Polygon>
+
+          <Polygon className="absolute top-40 right-[22%]">
+            <WorkflowIcon className="text-white/60" />
+          </Polygon>
+
+          <Polygon className="absolute top-75 right-[12%] size-15">
+            <CampaignIcon className="size-5 text-white" />
+          </Polygon>
+
+          <Polygon className="absolute top-10 right-[8%] size-20">
+            <UserIcon className="size-6" />
+          </Polygon>
+
+          <h1 className="mt-60 text-center text-2xl leading-[120%] font-bold sm:mt-80 sm:text-3xl lg:text-[38px]">
+            Extracting Information...
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="max-w-xs text-center font-ronzino text-base leading-[140%] sm:max-w-sm lg:max-w-lg lg:text-lg lg:leading-[120%]">
+            We are extracting information from the above honey combs to your
+            system
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+
+        <Dashboard />
+      </div>
+    </>
+  )
 }
