@@ -4,7 +4,7 @@ import { GradientBG } from "@/components/gradient-bg"
 import { Polygon } from "@/components/polygon"
 import { AIIcon } from "@/components/icons/ai"
 import { InboxIcon } from "@/components/icons/inbox"
-import { UserIcon } from "@/components/icons/user"
+import { UserGroupIcon } from "@/components/icons/user-group"
 import { WorkflowIcon } from "@/components/icons/workflow"
 import { CampaignIcon } from "@/components/icons/campaign"
 import { Dashboard } from "@/components/dashboard"
@@ -32,7 +32,7 @@ export default function Home() {
           </Polygon>
 
           <Polygon className="absolute top-68 left-[25%] size-20">
-            <UserIcon className="size-6" />
+            <UserGroupIcon className="size-6" />
           </Polygon>
 
           <Polygon className="absolute top-40 right-[22%]">
@@ -44,7 +44,7 @@ export default function Home() {
           </Polygon>
 
           <Polygon className="absolute top-10 right-[8%] size-20">
-            <UserIcon className="size-6" />
+            <UserGroupIcon className="size-6" />
           </Polygon>
 
           <h1 className="mt-60 text-center text-2xl leading-[120%] font-bold sm:mt-80 sm:text-3xl lg:text-[38px]">

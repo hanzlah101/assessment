@@ -119,7 +119,7 @@
 
 @layer base {
   * {
-    @apply overscroll-y-none border-border outline-ring/50;
+    @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground selection:bg-primary/10 selection:text-primary;
