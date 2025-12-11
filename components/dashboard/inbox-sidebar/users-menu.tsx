@@ -4,6 +4,7 @@ import { SidebarItem, SidebarItemSkeleton } from "./sidebar-item"
 import { ChevronDownIcon } from "lucide-react"
 import { UserRoundedFilledIcon } from "@/components/icons/user-rounded"
 import { useUsersQuery } from "@/queries/use-users-query"
+import { useChatStore } from "@/stores/use-chat-store"
 import {
   Collapsible,
   CollapsibleContent,
@@ -12,6 +13,9 @@ import {
 
 export function UsersMenu() {
   const { data, isLoading } = useUsersQuery()
+
+  const selectedUserId = useChatStore((state) => state.selectedUserId)
+  const setSelectedUserId = useChatStore((state) => state.setSelectedUserId)
 
   return (
     <Collapsible defaultOpen>
@@ -26,7 +30,12 @@ export function UsersMenu() {
               <SidebarItemSkeleton key={index} />
             ))
           : data?.map((user) => (
-              <SidebarItem key={user.id} unreadCount={user.unreadCount}>
+              <SidebarItem
+                key={user.id}
+                unreadCount={user.unreadCount}
+                isActive={selectedUserId === user.id}
+                onClick={() => setSelectedUserId(user.id)}
+              >
                 <UserRoundedFilledIcon />
                 <span className="truncate">{user.name}</span>
               </SidebarItem>

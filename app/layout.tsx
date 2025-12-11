@@ -5,6 +5,7 @@ import localFont from "next/font/local"
 
 import { cn } from "@/lib/utils"
 import { QueryProvider } from "@/components/query-provider"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const roboto = Roboto({
   variable: "--font-sans",
@@ -77,7 +78,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           roboto.variable,
@@ -88,7 +89,9 @@ export default function RootLayout({
           "font-sans antialiased"
         )}
       >
-        <QueryProvider>{children}</QueryProvider>
+        <ThemeProvider>
+          <QueryProvider>{children}</QueryProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

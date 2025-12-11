@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { InboxIcon } from "@/components/icons/inbox"
 import { UserGroupIcon } from "@/components/icons/user-group"
@@ -5,6 +7,8 @@ import { AIIcon } from "@/components/icons/ai"
 import { CampaignIcon } from "@/components/icons/campaign"
 import { WorkflowIcon } from "@/components/icons/workflow"
 import { SettingsIcon } from "@/components/icons/settings"
+import { useCurrentUserQuery } from "@/queries/use-current-user-query"
+import { Skeleton } from "@/components/ui/skeleton"
 import {
   Tooltip,
   TooltipContent,
@@ -54,13 +58,33 @@ export function DashboardHeader() {
           <TooltipContent>Settings</TooltipContent>
         </Tooltip>
 
-        <div className="flex items-center gap-1 text-[9.82px]">
-          <div className="flex size-5 shrink-0 items-center justify-center rounded-full bg-[#FE3265] font-sf-compact font-semibold text-white">
-            <span className="font-inter font-semibold">M</span>
-          </div>
-          <span className="font-inter font-semibold">Michael Johnson</span>
-        </div>
+        <User />
       </div>
     </header>
+  )
+}
+
+function User() {
+  const { data: user, isLoading } = useCurrentUserQuery()
+
+  return (
+    <div className="flex items-center gap-1 text-[9.82px]">
+      {isLoading ? (
+        <Skeleton className="size-5 shrink-0 rounded-full" />
+      ) : (
+        <div
+          className="flex size-5 shrink-0 items-center justify-center rounded-full font-sf-compact font-semibold text-white"
+          style={{ backgroundColor: "#FE3265" }}
+        >
+          {user?.name.charAt(0)}
+        </div>
+      )}
+
+      {isLoading ? (
+        <Skeleton className="h-3.5 w-18.75 rounded" />
+      ) : (
+        <span className="font-inter font-semibold">{user?.name}</span>
+      )}
+    </div>
   )
 }

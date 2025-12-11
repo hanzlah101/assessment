@@ -122,7 +122,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground selection:bg-primary/10 selection:text-primary;
+    @apply bg-[#0C0C0C] text-foreground selection:bg-primary/10 selection:text-primary;
   }
   button:not(:disabled) {
     @apply cursor-pointer;

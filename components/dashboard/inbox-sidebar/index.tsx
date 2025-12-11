@@ -7,7 +7,7 @@ import { UserRoundedIcon } from "@/components/icons/user-rounded"
 
 export function InboxSidebar() {
   return (
-    <aside className="w-full max-w-42 rounded-l-lg border-r bg-background px-3 py-3.5">
+    <aside className="size-full max-w-42 flex-1 shrink-0 overflow-x-hidden overflow-y-auto rounded-l-lg border-r bg-background px-3 pt-3.5 pb-3">
       <h1 className="px-2 font-sf-compact text-xs font-bold">Inbox</h1>
 
       <div className="mt-3 flex flex-col gap-1">
