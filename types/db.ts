@@ -10,3 +10,17 @@ export type User = {
     bs: string
   }
 }
+
+export type Chat = {
+  id: number
+  name: string
+  body: string
+  time: string
+}
+
+export type Message = {
+  id: number
+  senderId: number
+  body: string
+  timestamp: Date
+}
