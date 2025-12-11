@@ -21,7 +21,7 @@ export default function Home() {
         className="pointer-events-none fixed top-20 left-1/2 z-10 size-52 -translate-x-1/2 object-cover mix-blend-screen sm:top-24 sm:size-60 lg:top-[88.5px] lg:size-72"
       />
 
-      <div className="sticky top-18 flex w-full flex-col items-center justify-center gap-3 px-6 pt-6 pb-8 text-white sm:px-10 sm:pb-12 lg:px-20 lg:pb-16">
+      <div className="sticky top-10 flex w-full flex-col items-center justify-center gap-3 px-6 pt-6 pb-8 text-white sm:top-12 sm:px-10 sm:pb-12 md:top-16 lg:top-20 lg:px-20 lg:pb-16">
         <Polygon className="absolute top-10 left-[20%]">
           <AIIcon />
         </Polygon>

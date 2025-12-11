@@ -1,3 +1,5 @@
+"use client"
+
 import { ChevronDownIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SidebarLeftIcon } from "@/components/icons/sidebar"
@@ -6,6 +8,7 @@ import { SearchIcon } from "@/components/icons/search"
 import { AdjustIcon } from "@/components/icons/adjust"
 import { ChatsList } from "@/components/dashboard/inbox/chats-list"
 import { ChatSearchInput } from "@/components/dashboard/inbox/chat-search-input"
+import { useDashboardModal } from "@/stores/use-dashboard-modal"
 import {
   Tooltip,
   TooltipContent,
@@ -13,16 +16,23 @@ import {
 } from "@/components/ui/tooltip"
 
 export function Inbox() {
+  const onOpen = useDashboardModal((state) => state.onOpen)
+
   return (
-    <div className="flex size-full max-w-62.5 flex-col rounded-r-lg bg-background/70">
+    <div className="flex h-full w-full max-w-full shrink-0 flex-col rounded-r-lg bg-background/70 md:max-w-62.5">
       <nav className="flex shrink-0 items-center gap-2 border-b p-4">
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button size="fit" variant="muted-text-reverse">
+            <Button
+              size="fit"
+              variant="muted-text-reverse"
+              onClick={() => onOpen("inbox-sidebar")}
+              className="xl:hidden"
+            >
               <SidebarLeftIcon className="size-[11px]" />
             </Button>
           </TooltipTrigger>
-          <TooltipContent>Collapse Sidebar</TooltipContent>
+          <TooltipContent>Open Sidebar</TooltipContent>
         </Tooltip>
 
         <p className="font-sf-compact text-xs font-semibold">Michael Johnson</p>
