@@ -25,7 +25,7 @@ export function ChatHeader() {
           <TooltipTrigger asChild>
             <Button
               size="icon-sm"
-              className="size-6 lg:hidden"
+              className="size-6 xl:hidden"
               variant="secondary"
               onClick={() => onOpen("chat-details")}
             >
