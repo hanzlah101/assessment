@@ -2,7 +2,16 @@
 
 A beautiful, responsive chat dashboard built with Next.js. Features a sleek interface with dark mode support, real-time chat functionality, and a fully responsive design that works seamlessly across desktop, tablet, and mobile devices.
 
-![Dashboard Screenshot](./public/screenshots/screenshot-dashboard.png)
+## 🎬 Demo Video
+
+<div align="center">
+  <video width="100%" controls autoplay loop muted>
+    <source src="./public/screenshots/demo-video.mov" type="video/quicktime" />
+    <source src="./public/screenshots/demo-video.mov" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <p><em>Watch the full demo to see all features in action</em></p>
+</div>
 
 ## ✨ Features
 
@@ -192,7 +201,7 @@ npm start
 
 ## 📁 Project Structure
 
-```
+```text
 ├── app/                    # Next.js App Router pages
 ├── components/             # React components
 │   ├── dashboard/         # Dashboard-specific components
