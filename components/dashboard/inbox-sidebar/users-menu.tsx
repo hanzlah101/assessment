@@ -15,7 +15,7 @@ export function UsersMenu() {
 
   return (
     <Collapsible defaultOpen>
-      <CollapsibleTrigger className="group flex w-full items-center justify-baseline px-2 py-2 text-[10px]">
+      <CollapsibleTrigger className="group flex w-full items-center justify-between px-2 py-2 text-[10px]">
         Users
         <ChevronDownIcon className="ml-auto size-2.5 transition-transform group-data-[state=open]:rotate-180" />
       </CollapsibleTrigger>
