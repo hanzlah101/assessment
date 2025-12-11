@@ -7,22 +7,9 @@ type ChatOtherChartsProps = {
   charts: ChatDetailsData["otherCharts"]
 }
 
-const iconMap: Record<
-  string,
-  React.ComponentType<React.SVGProps<SVGSVGElement>>
-> = {
-  instagram: InstagramIcon,
-  twitter: InstagramIcon,
-  facebook: InstagramIcon,
-  linkedin: InstagramIcon,
-  youtube: InstagramIcon
-}
-
 export function ChatOtherCharts({ charts }: ChatOtherChartsProps) {
   const chart = charts[0]
   if (!chart) return null
-
-  const Icon = iconMap[chart.icon] || InstagramIcon
 
   return (
     <CollapsibleSection
@@ -30,7 +17,7 @@ export function ChatOtherCharts({ charts }: ChatOtherChartsProps) {
       className="flex items-center justify-between"
     >
       <div className="flex items-center gap-1">
-        <Icon className="size-4" />
+        <InstagramIcon className="size-[17px] shrink-0" />
         <div>
           <p className="text-[10px]">{chart.name}</p>
           <p className="text-[9px] text-muted-foreground">
@@ -48,7 +35,7 @@ ChatOtherCharts.Skeleton = function ChatOtherChartsSkeleton() {
   return (
     <CollapsibleSection.Skeleton className="flex min-h-[28.5px] items-center justify-between">
       <div className="flex items-center gap-1">
-        <Skeleton className="size-4 shrink-0 rounded-full" />
+        <Skeleton className="size-[17px] shrink-0 rounded-full" />
         <div className="space-y-1">
           <Skeleton className="h-2 w-10" />
           <Skeleton className="h-1.5 w-14" />

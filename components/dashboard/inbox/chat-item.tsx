@@ -3,17 +3,26 @@
 import { cn } from "@/lib/utils"
 import { randomColor } from "@/lib/utils"
 import { useChatStore } from "@/stores/use-chat-store"
+import { useDashboardModal } from "@/stores/use-dashboard-modal"
 import { Skeleton } from "@/components/ui/skeleton"
 import { type Chat } from "@/types/db"
 
 export function ChatItem({ chat }: { chat: Chat }) {
   const selectedChatId = useChatStore((state) => state.selectedChatId)
   const setSelectedChatId = useChatStore((state) => state.setSelectedChatId)
+  const onOpen = useDashboardModal((state) => state.onOpen)
+
+  function handleClick() {
+    setSelectedChatId(chat.id)
+    if (window.innerWidth < 768) {
+      onOpen("chat")
+    }
+  }
 
   return (
     <button
       key={chat.id}
-      onClick={() => setSelectedChatId(chat.id)}
+      onClick={handleClick}
       className={cn(
         "flex w-full items-center gap-2 rounded-md border bg-background p-2 transition-colors",
         selectedChatId === chat.id

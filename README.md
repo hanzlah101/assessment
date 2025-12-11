@@ -1,36 +1,249 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern Chat Dashboard
 
-## Getting Started
+A beautiful, responsive chat dashboard built with Next.js. Features a sleek interface with dark mode support, real-time chat functionality, and a fully responsive design that works seamlessly across desktop, tablet, and mobile devices.
 
-First, run the development server:
+## 🎬 Demo Video
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=ObKaqGy1pm0" target="_blank">
+    <img src="https://img.youtube.com/vi/ObKaqGy1pm0/maxresdefault.jpg" 
+         alt="Demo Video" width="600" />
+  </a>
+  <br />
+  <em>Watch the full demo to see all features in action</em>
+</p>
+
+## ✨ Features
+
+- 🎨 **Dark Mode** - Toggle between light and dark themes with system preference detection
+- 📱 **Fully Responsive** - Optimized for desktop, tablet, and mobile devices
+- 🎯 **JSON Placeholder Integration** - Fetches user data and messages from JSONPlaceholder API
+- 📋 **Drawer Modals** - Sidebar and detail panels that slide in on mobile devices
+- 🎨 **Modern UI Components** - Built with shadcn/ui and Radix UI primitives
+
+## 🛠️ Tech Stack
+
+### Core Framework
+
+- **Next.js** `16.0.8` - React framework with App Router
+- **React** `19.2.1` - UI library
+- **TypeScript** `5.x` - Type safety
+
+### Styling & UI
+
+- **Tailwind CSS** `4.x` - Utility-first CSS framework
+- **shadcn/ui** - High-quality component library
+- **Radix UI** - Unstyled, accessible component primitives
+  - `@radix-ui/react-collapsible` `^1.1.12`
+  - `@radix-ui/react-dialog` `^1.1.15`
+  - `@radix-ui/react-slot` `^1.2.4`
+  - `@radix-ui/react-tooltip` `^1.2.8`
+- **Lucide React** `^0.556.0` - Icon library
+- **Motion** `^12.23.25` - Animation library
+- **Vaul** `^1.1.2` - Drawer component library
+
+### State Management & Data Fetching
+
+- **Zustand** `^5.0.9` - Lightweight state management
+- **TanStack Query** `^5.90.12` - Powerful data synchronization
+- **Axios** `^1.13.2` - HTTP client
+
+### Utilities
+
+- **next-themes** `^0.4.6` - Dark mode support
+- **date-fns** `^4.1.0` - Date manipulation
+- **class-variance-authority** `^0.7.1` - Component variants
+- **clsx** `^2.1.1` - Conditional classnames
+- **tailwind-merge** `^3.4.0` - Merge Tailwind classes
+
+## 📸 Screenshots
+
+### Desktop Views
+
+<div align="center">
+  <img src="./public/screenshots/screenshot-dashboard.png" alt="Dashboard" width="800" />
+  <p><em>Main Dashboard - Desktop View</em></p>
+</div>
+
+<div align="center">
+  <img src="./public/screenshots/screenshot-dark-mode.png" alt="Dark Mode" width="800" />
+  <p><em>Dark Mode Interface</em></p>
+</div>
+
+<div align="center">
+  <img src="./public/screenshots/screenshot-landing.png" alt="Landing Page" width="800" />
+  <p><em>Landing Page</em></p>
+</div>
+
+### Tablet View
+
+<div align="center">
+  <img src="./public/screenshots/screenshot-tablet.png" alt="Tablet View" width="600" />
+  <p><em>Tablet Responsive Design</em></p>
+</div>
+
+### Mobile Views
+
+<div align="center">
+  <img src="./public/screenshots/screenshot-mobile.png" alt="Mobile Dashboard" width="400" />
+  <p><em>Mobile Dashboard</em></p>
+</div>
+
+<div align="center">
+  <img src="./public/screenshots/screenshot-mobile-chat.png" alt="Mobile Chat" width="400" />
+  <p><em>Mobile Chat Interface</em></p>
+</div>
+
+<div align="center">
+  <img src="./public/screenshots/screenshot-mobile-menu.png" alt="Mobile Menu" width="400" />
+  <p><em>Mobile Navigation Menu</em></p>
+</div>
+
+<div align="center">
+  <img src="./public/screenshots/screenshot-mobile-landing.png" alt="Mobile Landing" width="400" />
+  <p><em>Mobile Landing Page</em></p>
+</div>
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have one of the following package managers installed:
+
+- **Node.js** 18+
+- **Bun** (recommended)
+- **npm** / **yarn** / **pnpm**
+
+### Installation
+
+1. **Clone the repository**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+git clone https://github.com/hanzlah101/assesment.git
+cd assesment
+```
+
+2. **Install dependencies**
+
+Using Bun (recommended):
+
+```bash
+bun install
+```
+
+Or using npm:
+
+```bash
+npm install
+```
+
+Or using yarn:
+
+```bash
+yarn install
+```
+
+Or using pnpm:
+
+```bash
+pnpm install
+```
+
+3. **Run the development server**
+
+Using Bun:
+
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or using npm:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Or using yarn:
 
-## Learn More
+```bash
+yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Or using pnpm:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Open your browser**
 
-## Deploy on Vercel
+Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🏗️ Self-Hosting
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Build for Production
+
+1. **Build the application**
+
+```bash
+bun run build
+# or
+npm run build
+```
+
+2. **Start the production server**
+
+```bash
+bun start
+# or
+npm start
+```
+
+## 📁 Project Structure
+
+```text
+├── app/                    # Next.js App Router pages
+├── components/             # React components
+│   ├── dashboard/         # Dashboard-specific components
+│   ├── ui/                # Reusable UI components
+│   └── icons/             # Icon components
+├── lib/                   # Utility functions and API config
+├── queries/               # TanStack Query hooks
+├── stores/                # Zustand state management
+├── types/                 # TypeScript type definitions
+└── public/                # Static assets
+    └── screenshots/      # Screenshot images
+```
+
+## 🎯 Key Features Explained
+
+### JSON Placeholder Integration
+
+The application fetches user data, messages, and comments from [JSONPlaceholder](https://jsonplaceholder.typicode.com/), a free fake REST API for testing and prototyping. The data is transformed and displayed in a chat-like interface.
+
+### Dark Mode
+
+Powered by `next-themes`, the application supports:
+
+- System preference detection
+- Manual theme switching
+- Persistent theme selection
+- Smooth theme transitions
+
+### Responsive Design
+
+The dashboard adapts beautifully across all screen sizes:
+
+- **Desktop (xl+)**: Full sidebar, chat, and details panel
+- **Tablet (md-xl)**: Collapsible sidebars with drawer modals
+- **Mobile (<md)**: Full-screen drawers for chat and details
+
+### State Management
+
+- **Zustand** for global UI state (modals, selected chat, etc.)
+- **TanStack Query** for server state and data fetching
+- Fine-grained reactivity with selector-based subscriptions
+
+---
+
+Built with ❤️ using Next.js and modern web technologies.
