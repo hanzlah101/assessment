@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { InboxIcon } from "@/components/icons/inbox"
-import { UserIcon } from "@/components/icons/user"
+import { UserGroupIcon } from "@/components/icons/user-group"
 import { AIIcon } from "@/components/icons/ai"
 import { CampaignIcon } from "@/components/icons/campaign"
 import { WorkflowIcon } from "@/components/icons/workflow"
@@ -24,7 +24,7 @@ export function DashboardHeader() {
         </Button>
 
         <Button size="sm" variant="ghost">
-          <UserIcon className="size-[14px] text-muted-foreground" />
+          <UserGroupIcon className="size-[14px] text-muted-foreground" />
           Contacts
         </Button>
 

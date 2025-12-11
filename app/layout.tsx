@@ -2,7 +2,9 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Roboto, Poppins, Inter } from "next/font/google"
 import localFont from "next/font/local"
+
 import { cn } from "@/lib/utils"
+import { QueryProvider } from "@/components/query-provider"
 
 const roboto = Roboto({
   variable: "--font-sans",
@@ -86,7 +88,7 @@ export default function RootLayout({
           "font-sans antialiased"
         )}
       >
-        {children}
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   )
