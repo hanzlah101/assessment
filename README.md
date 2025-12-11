@@ -4,10 +4,14 @@ A beautiful, responsive chat dashboard built with Next.js. Features a sleek inte
 
 ## 🎬 Demo Video
 
-<div align="center">
-  <iframe src="https://embed.screenapp.io/app/v/qVXhwXltTX?embed=true" width="100%" height="960" frameborder="0" allowfullscreen></iframe>
-  <p><em>Watch the full demo to see all features in action</em></p>
-</div>
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=ObKaqGy1pm0" target="_blank">
+    <img src="https://img.youtube.com/vi/ObKaqGy1pm0/maxresdefault.jpg" 
+         alt="Demo Video" width="600" />
+  </a>
+  <br />
+  <em>Watch the full demo to see all features in action</em>
+</p>
 
 ## ✨ Features
 
