@@ -50,8 +50,10 @@ export function useMessagesQuery() {
             ? (currentUser?.id ?? 1)
             : pick(otherUserIds)
 
+          const messageId = dayIndex * messagesPerDay + i + 1
+
           messages.push({
-            id: comment.id,
+            id: messageId,
             senderId: senderId ?? 1,
             body: comment.body,
             timestamp
