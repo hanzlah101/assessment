@@ -26,17 +26,17 @@ const inter = Inter({
 const ronzino = localFont({
   src: [
     {
-      path: "../../public/fonts/ronzino/Ronzino-Regular.otf",
+      path: "../public/fonts/ronzino/Ronzino-Regular.otf",
       weight: "400",
       style: "normal"
     },
     {
-      path: "../../public/fonts/ronzino/ronzino-medium.otf",
+      path: "../public/fonts/ronzino/ronzino-medium.otf",
       weight: "500",
       style: "normal"
     },
     {
-      path: "../../public/fonts/ronzino/ronzino-bold.otf",
+      path: "../public/fonts/ronzino/ronzino-bold.otf",
       weight: "700",
       style: "normal"
     }
@@ -48,17 +48,17 @@ const ronzino = localFont({
 const sfCompact = localFont({
   src: [
     {
-      path: "../../public/fonts/sf-compact/sf-compact-regular.ttf",
+      path: "../public/fonts/sf-compact/sf-compact-regular.ttf",
       weight: "400",
       style: "normal"
     },
     {
-      path: "../../public/fonts/sf-compact/sf-compact-medium.ttf",
+      path: "../public/fonts/sf-compact/sf-compact-medium.ttf",
       weight: "500",
       style: "normal"
     },
     {
-      path: "../../public/fonts/sf-compact/sf-compact-bold.ttf",
+      path: "../public/fonts/sf-compact/sf-compact-bold.ttf",
       weight: "700",
       style: "normal"
     }
