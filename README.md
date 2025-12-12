@@ -2,6 +2,10 @@
 
 A beautiful, responsive chat dashboard built with Next.js. Features a sleek interface with dark mode support, real-time chat functionality, and a fully responsive design that works seamlessly across desktop, tablet, and mobile devices.
 
+## 🌐 Live Demo
+
+**[👉 Try it live](https://assessment-omega-pink.vercel.app/)**
+
 ## 🎬 Demo Video
 
 <p align="center">
